@@ -1,2 +1,2 @@
-# serverles-react-app
+# serverless-react-app
 Basic React app which doesn't need a server.

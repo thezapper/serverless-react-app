@@ -1,0 +1,93 @@
+//@import "~normalize.css/normalize.css";
+
+$color-darkblue: #084e8e;
+$color-dirtysock: #f2f2f3;
+
+@import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
+
+@font-face {
+  font-family: 'Overpass';
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-stack:'Overpass', sans-serif;
+$body-text-color: #202020;
+body {
+  font: 100% $font-stack;
+  color: $body-text-color;
+  margin: 0;
+  padding: 0;
+  //font-size: $small-font!important;
+}
+
+.cell
+{
+  position: absolute;
+  border: 1px rgba($color: #ffffff, $alpha: 1.0) solid;
+  box-sizing: border-box;
+  box-shadow:0px 0px 10px 2px #555 inset;
+  transition: box-shadow 2.0s, background-color 2.0s;
+  &-hover
+  {
+    @extend .cell;
+    box-shadow:inset 0px 0px 15px 5px #444;
+    transition: box-shadow 0.5s, background-color 0.5s;
+  }
+}
+
+.cell-text
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20pt;
+}
+
+.grid
+{
+  position: relative;
+  //overflow-x: auto;
+  //left: 60px;
+  margin-top: 10;
+  //padding: auto;
+  //top: 0;
+  width: 800px;
+  height: 800px;
+  z-index: 0;
+  //left:10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  //border: thin rgb(51, 153, 102) solid;
+}
+
+.picker
+{
+  position: relative;
+  margin: 20px;
+
+  //left: 10px;
+  //top: 10px;
+}
+
+.radioCol
+{
+  display: inline-block;
+  border: 2px $color-dirtysock solid;
+  padding: 5;
+  width:30%;
+  //background-color: green;
+  //right: 10;
+  //position: absolute;
+  margin-right: 5;
+
+  //left: 10px;
+  //top: 10px;
+}
+
+textarea
+{
+  resize: none;
+}
